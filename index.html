@@ -4,7 +4,12 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Lisa Han</title>
     <!-- font -->
-    <link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Montserrat|Oswald:500" />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="https://fonts.googleapis.com/css?family=Montserrat|Oswald:500"
+    />
+    <!-- fontawesome -->
     <link
       rel="stylesheet"
       media="screen"
@@ -12,12 +17,39 @@
       integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
       crossorigin="anonymous"
     />
-    <!-- css -->
+    <!-- dev icon css -->
     <link
       rel="stylesheet"
       href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"
     />
-    <link rel="stylesheet" media="all" href="./css/application.css" data-turbolinks-track="reload" />
+    <!-- tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d'
+            }
+          }
+        }
+      }
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+
+    <link
+      rel="stylesheet"
+      media="all"
+      href="./css/application.css"
+      data-turbolinks-track="reload"
+    />
     <link rel="stylesheet" media="screen" href="./css/home.css" />
   </head>
 
@@ -25,7 +57,9 @@
     <div class="container-fluid">
       <div class="row">
         <!-- Left col -->
-        <div class="sidebar main-accent-bg tertiary-accent col-12 col-sm-5 col-md-4 col-lg-3">
+        <div
+          class="sidebar main-accent-bg tertiary-accent col-12 col-sm-5 col-md-4 col-lg-3"
+        >
           <div class="row">
             <div class="top-card col-12">
               <h1>Lisa Han</h1>
@@ -38,20 +72,26 @@
                   <span class="fa-layers fa-fw fa-li fa-2x">
                     <i class="fab fa-linkedin"></i>
                   </span>
-                  <a target="_blank" href="http://linkedin.com/in/ellesis">LinkedIn</a>
+                  <a target="_blank" href="http://linkedin.com/in/ellesis"
+                    >LinkedIn</a
+                  >
                 </li>
                 <li class="github">
                   <span class="fa-layers fa-fw fa-li fa-2x">
                     <i class="fab fa-github-square"></i>
                   </span>
-                  <a target="_blank" href="https://github.com/ellesis/">GitHub</a>
+                  <a target="_blank" href="https://github.com/ellesis/"
+                    >GitHub</a
+                  >
                 </li>
 
                 <li class="pdf">
                   <span class="fa-layers fa-fw fa-li fa-2x">
                     <i class="fas fa-file-pdf"></i>
                   </span>
-                  <a target="_blank" href="./data/Resume-LisaHan-2022.pdf">PDF Resume</a>
+                  <a target="_blank" href="./data/Resume-LisaHan-2022.pdf"
+                    >PDF Resume</a
+                  >
                 </li>
               </ul>
             </div>
@@ -60,14 +100,30 @@
 
         <!-- Right col -->
         <div class="main-content white-bg col-12 col-sm-7 col-md-8 col-lg-9">
+          <h1 class="text-3xl font-bold underline">Hello world!</h1>
+          <h1 class="text-3xl font-bold underline text-clifford">
+            Hello world!
+          </h1>
+
           <div class="row no-gutters">
             <div class="col-12 summary">
               <h3>About Me</h3>
               <ul>
-                <li>Upgrade skills as the latest modern web technology to be qualified for current job market</li>
-                <li>Natural born programmer with a logical engineering mindset</li>
-                <li>Technical, hard working, highly organized, personable, team player and a great problem solver</li>
-                <li>I enjoy making applications with React, Python, and Javascript.</li>
+                <li>
+                  Upgrade skills as the latest modern web technology to be
+                  qualified for current job market
+                </li>
+                <li>
+                  Natural born programmer with a logical engineering mindset
+                </li>
+                <li>
+                  Technical, hard working, highly organized, personable, team
+                  player and a great problem solver
+                </li>
+                <li>
+                  I enjoy making applications with React, Python, and
+                  Javascript.
+                </li>
               </ul>
             </div>
           </div>
@@ -218,7 +274,8 @@
                   <p class="description">
                     Tourism information website based on bloggers input
                     <br />
-                    Next.js, Apollo, GraphQL, Bootstrap5, Material UI-5, Javascript ES6+, CSS, HTML, webpack, npm
+                    Next.js, Apollo, GraphQL, Bootstrap5, Material UI-5,
+                    Javascript ES6+, CSS, HTML, webpack, npm
                   </p>
                 </div>
               </div>
@@ -227,7 +284,10 @@
               <div class="row no-gutters project-row">
                 <div class="col-2 col-sm-4 col-md-3 project-logo-column">
                   <a target="_blank" href="http://movie-matcher.lisa7h.com">
-                    <img class="project-logo" src="./img/logo-movie-matcher.png" />
+                    <img
+                      class="project-logo"
+                      src="./img/logo-movie-matcher.png"
+                    />
                   </a>
                 </div>
                 <div class="col-10 col-sm-8 col-md-9">
@@ -276,7 +336,8 @@
                     <h6>yokose.lisa7h.com</h6>
                   </a>
                   <p class="description">
-                    stock and financial index information and notification system
+                    stock and financial index information and notification
+                    system
                     <br />
                     React, Redux, Axios, E-chart, Javascript, HTML, CSS
                   </p>
