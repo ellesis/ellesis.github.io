@@ -22,34 +22,33 @@
       rel="stylesheet"
       href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"
     />
-    <!-- tailwindcss -->
-    <script src="https://cdn.tailwindcss.com"></script>
 
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              clifford: '#da373d'
-            }
-          }
-        }
-      }
-    </script>
-    <style type="text/tailwindcss">
-      @layer utilities {
-        .content-auto {
-          content-visibility: auto;
-        }
-      }
-    </style>
-
+    <!-- bootstrap -->
     <link
       rel="stylesheet"
       media="all"
       href="./css/application.css"
       data-turbolinks-track="reload"
     />
+
+    <!-- tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/tailwind.config.js"></script>
+    <style type="text/tailwindcss">
+      @layer components {
+        .title {
+          @apply text-blue-700 text-4xl font-semibold py-4;
+        }
+      }
+
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+          background-color: aqua;
+        }
+      }
+    </style>
+
     <link rel="stylesheet" media="screen" href="./css/home.css" />
   </head>
 
@@ -100,7 +99,8 @@
 
         <!-- Right col -->
         <div class="main-content white-bg col-12 col-sm-7 col-md-8 col-lg-9">
-          <h1 class="text-3xl font-bold underline">Hello world!</h1>
+          <!-- tailwind css -->
+          <h1 class="title">Hello world!</h1>
           <h1 class="text-3xl font-bold underline text-clifford">
             Hello world!
           </h1>
