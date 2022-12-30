@@ -35,9 +35,36 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./js/tailwind.config.js"></script>
     <style type="text/tailwindcss">
+      @layer base {
+        h1 {
+          @apply text-5xl font-bold p-2;
+        }
+        h2 {
+          @apply text-4xl font-bold p-1;
+        }
+        h3 {
+          @apply text-4xl font-bold p-2;
+        }
+        h4 {
+          @apply text-2xl font-bold p-1;
+        }
+        hr {
+          @apply my-4;
+        }
+      }
+
       @layer components {
-        .title {
-          @apply text-blue-700 text-4xl font-semibold py-4;
+        .skill-box {
+          @apply flex flex-col items-center p-4 w-40;
+        }
+        .skill-icon {
+          @apply text-6xl;
+        }
+        .skill-img-log {
+          @apply w-14 h-14 my-1;
+        }
+        .project-logo {
+          @apply max-w-[80px] sm:max-w-[100px] md:max-w-[140px];
         }
       }
 
@@ -49,304 +76,383 @@
       }
     </style>
 
-    <link rel="stylesheet" media="screen" href="./css/home.css" />
+    <!-- <link rel="stylesheet" media="screen" href="./css/home.css" /> -->
   </head>
 
-  <body>
-    <div class="container-fluid">
-      <div class="row">
-        <!-- Left col -->
-        <div
-          class="sidebar main-accent-bg tertiary-accent col-12 col-sm-5 col-md-4 col-lg-3"
-        >
-          <div class="row">
-            <div class="top-card col-12">
-              <h1>Lisa Han</h1>
-              <h2>Software Engineer</h2>
-            </div>
-
-            <div class="bottom-card col-12">
-              <ul class="contact fa-ul">
-                <li class="linkedin">
-                  <span class="fa-layers fa-fw fa-li fa-2x">
-                    <i class="fab fa-linkedin"></i>
-                  </span>
-                  <a target="_blank" href="http://linkedin.com/in/ellesis"
-                    >LinkedIn</a
-                  >
-                </li>
-                <li class="github">
-                  <span class="fa-layers fa-fw fa-li fa-2x">
-                    <i class="fab fa-github-square"></i>
-                  </span>
-                  <a target="_blank" href="https://github.com/ellesis/"
-                    >GitHub</a
-                  >
-                </li>
-
-                <li class="pdf">
-                  <span class="fa-layers fa-fw fa-li fa-2x">
-                    <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <a target="_blank" href="./data/Resume-LisaHan-2022.pdf"
-                    >PDF Resume</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right col -->
-        <div class="main-content white-bg col-12 col-sm-7 col-md-8 col-lg-9">
-          <!-- tailwind css -->
-          <h1 class="title">Hello world!</h1>
-          <h1 class="text-3xl font-bold underline text-clifford">
-            Hello world!
-          </h1>
-
-          <div class="row no-gutters">
-            <div class="col-12 summary">
-              <h3>About Me</h3>
-              <ul>
-                <li>
-                  Upgrade skills as the latest modern web technology to be
-                  qualified for current job market
-                </li>
-                <li>
-                  Natural born programmer with a logical engineering mindset
-                </li>
-                <li>
-                  Technical, hard working, highly organized, personable, team
-                  player and a great problem solver
-                </li>
-                <li>
-                  I enjoy making applications with React, Python, and
-                  Javascript.
-                </li>
-              </ul>
-            </div>
+  <body class="bg-lightyellow text-[14px]">
+    <div class="min-h-screen flex flex-col">
+      <div class="flex flex-col flex-1 sm:flex-row">
+        <!-- left side -->
+        <aside class="bg-darkgreen w-full sm:w-80 md:w-96">
+          <div class="flex flex-col items-center p-4 text-gray-300">
+            <h1>Lisa Han</h1>
+            <h2>Software Engineer</h2>
           </div>
 
-          <div class="row no-gutters">
-            <div class="col-12 skills">
-              <h3>Skills</h3>
-              <ul class="skills-list">
-                <li class="ruby float-left" title="React">
-                  <a target="_blank" href="https://reactjs.org/">
-                    <i class="devicon-react-original colored"></i>
+          <div class="flex flex-col px-8">
+            <ul class="text-gray-300 space-y-4 py-8">
+              <li class="linkedin">
+                <span class="text-5xl">
+                  <i class="fab fa-linkedin"></i>
+                </span>
+                <a
+                  target="_blank"
+                  href="http://linkedin.com/in/ellesis"
+                  class="text-orange-400"
+                >
+                  LinkedIn
+                </a>
+              </li>
+
+              <li class="github">
+                <span class="text-5xl">
+                  <i class="fab fa-github-square"></i>
+                </span>
+                <a
+                  target="_blank"
+                  href="https://github.com/ellesis/"
+                  class="text-orange-400"
+                  >GitHub</a
+                >
+              </li>
+
+              <li class="pdf">
+                <span class="text-5xl">
+                  <i class="fas fa-file-pdf"></i>
+                </span>
+                <a
+                  target="_blank"
+                  href="./data/Resume-LisaHan-2022.pdf"
+                  class="text-orange-400"
+                  >PDF Resume</a
+                >
+              </li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- main -->
+        <main class="flex-1 sm:min-w-[400px]">
+          <!-- About me -->
+          <div class="p-10">
+            <h3>About Me</h3>
+            <ul>
+              <li>
+                Upgrade skills as the latest modern web technology to be
+                qualified for current job market
+              </li>
+              <li>
+                Natural born programmer with a logical engineering mindset
+              </li>
+              <li>
+                Technical, hard working, highly organized, personable, team
+                player and a great problem solver
+              </li>
+              <li>
+                I enjoy making applications with React, Python, and Javascript.
+              </li>
+            </ul>
+          </div>
+
+          <!-- skill icons -->
+          <div class="p-10">
+            <h3>Skills</h3>
+            <ul class="flex flex-wrap">
+              <li>
+                <a target="_blank" href="https://reactjs.org/">
+                  <div class="skill-box">
+                    <div class="skill-icon">
+                      <i class="devicon-react-original colored"></i>
+                    </div>
                     <span>React</span>
-                  </a>
-                </li>
-                <li class="float-left" title="Redux">
-                  <a target="_blank" href="https://redux.js.org/">
-                    <img class="svg-logo" src="./img/redux.png" />
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a target="_blank" href="https://redux.js.org/">
+                  <div class="skill-box">
+                    <img class="skill-img-log" src="./img/redux.png" />
                     <span>Redux</span>
-                  </a>
-                </li>
-                <li class="float-left" title="python">
-                  <a target="_blank" href="https://www.python.org/">
-                    <img class="svg-logo" src="./img/python.png" />
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a target="_blank" href="https://www.python.org/">
+                  <div class="skill-box">
+                    <img class="skill-img-log" src="./img/python.png" />
                     <span>python</span>
-                  </a>
-                </li>
-                <li class="float-left" title="Flask">
-                  <a target="_blank" href="http://flask.pocoo.org/">
-                    <img class="svg-logo" src="./img/flask.png" />
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a target="_blank" href="http://flask.pocoo.org/">
+                  <div class="skill-box">
+                    <img class="skill-img-log" src="./img/flask.png" />
                     <span>Flask</span>
-                  </a>
-                </li>
+                  </div>
+                </a>
+              </li>
 
-                <li class="float-left" title="Javascript">
-                  <a target="_blank" href="https://www.javascript.com/">
-                    <i class="devicon-javascript-plain colored"></i>
+              <li>
+                <a target="_blank" href="https://www.javascript.com/">
+                  <div class="skill-box">
+                    <div class="skill-icon">
+                      <i class="devicon-javascript-plain colored"></i>
+                    </div>
                     <span>Javascript</span>
-                  </a>
-                </li>
+                  </div>
+                </a>
+              </li>
 
-                <li class="html5 float-left" title="HTML 6">
-                  <img class="svg-logo" src="./img/html6.png" />
+              <li>
+                <div class="skill-box">
+                  <img class="skill-img-log" src="./img/html6.png" />
                   <span>HTML 6</span>
-                </li>
+                </div>
+              </li>
 
-                <li class="html5 float-left" title="HTML 5">
-                  <a target="_blank" href="https://en.wikipedia.org/wiki/HTML5">
-                    <i class="devicon-html5-plain colored"></i>
+              <li>
+                <a target="_blank" href="https://en.wikipedia.org/wiki/HTML5">
+                  <div class="skill-box">
+                    <div class="skill-icon">
+                      <i class="devicon-html5-plain colored"></i>
+                    </div>
                     <span>HTML 5</span>
-                  </a>
-                </li>
-                <li class="css float-left" title="CSS">
-                  <i class="devicon-css3-plain colored"></i>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <div class="skill-box">
+                  <div class="skill-icon">
+                    <i class="devicon-css3-plain colored"></i>
+                  </div>
                   <span>CSS</span>
-                </li>
-                <li class="float-left" title="Bootstrap">
-                  <a target="_blank" href="https://getbootstrap.com/">
-                    <i class="devicon-bootstrap-plain colored"></i>
+                </div>
+              </li>
+
+              <li>
+                <a target="_blank" href="https://getbootstrap.com/">
+                  <div class="skill-box">
+                    <div class="skill-icon">
+                      <i class="devicon-bootstrap-plain colored"></i>
+                    </div>
                     <span>Bootstrap</span>
-                  </a>
-                </li>
+                  </div>
+                </a>
+              </li>
 
-                <li class="jquery float-left" title="jQuery">
-                  <a target="_blank" href="https://jquery.com/">
-                    <i class="devicon-jquery-plain colored"></i>
+              <li>
+                <a target="_blank" href="https://jquery.com/">
+                  <div class="skill-box">
+                    <div class="skill-icon">
+                      <i class="devicon-jquery-plain colored"></i>
+                    </div>
                     <span>jQuery</span>
-                  </a>
-                </li>
+                  </div>
+                </a>
+              </li>
 
-                <li class="float-left" title="NodeJS">
-                  <a target="_blank" href="https://nodejs.org/en/">
-                    <i class="devicon-nodejs-plain colored"></i>
+              <li>
+                <a target="_blank" href="https://nodejs.org/en/">
+                  <div class="skill-box">
+                    <div class="skill-icon">
+                      <i class="devicon-nodejs-plain colored"></i>
+                    </div>
                     <span>NodeJS</span>
-                  </a>
-                </li>
-                <li class="ruby float-left" title="Ruby">
-                  <a target="_blank" href="https://www.ruby-lang.org/en/">
-                    <i class="devicon-ruby-plain colored"></i>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a target="_blank" href="https://www.ruby-lang.org/en/">
+                  <div class="skill-box">
+                    <div class="skill-icon">
+                      <i class="devicon-ruby-plain colored"></i>
+                    </div>
                     <span>Ruby</span>
-                  </a>
-                </li>
-                <li class="rails float-left" title="Rails">
-                  <a target="_blank" href="https://rubyonrails.org/">
-                    <i class="devicon-rails-plain colored"></i>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a target="_blank" href="https://rubyonrails.org/">
+                  <div class="skill-box">
+                    <div class="skill-icon">
+                      <i class="devicon-rails-plain colored"></i>
+                    </div>
                     <span>Rails</span>
-                  </a>
-                </li>
+                  </div>
+                </a>
+              </li>
 
-                <li class="float-left" title="MySql">
-                  <a target="_blank" href="https://www.mysql.com/">
-                    <i class="devicon-mysql-plain colored"></i>
+              <li>
+                <a target="_blank" href="https://www.mysql.com/">
+                  <div class="skill-box">
+                    <div class="skill-icon">
+                      <i class="devicon-mysql-plain colored"></i>
+                    </div>
                     <span>MySql</span>
-                  </a>
-                </li>
-                <li class="float-left" title="PostgreSQL">
-                  <a target="_blank" href="https://www.postgresql.org/">
-                    <i class="devicon-postgresql-plain colored"></i>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a target="_blank" href="https://www.postgresql.org/">
+                  <div class="skill-box">
+                    <div class="skill-icon">
+                      <i class="devicon-postgresql-plain colored"></i>
+                    </div>
                     <span>PostgreSQL</span>
-                  </a>
-                </li>
-                <li class="float-left" title="mongoDB">
-                  <a target="_blank" href="https://www.mongodb.com/">
-                    <img class="svg-logo" src="./img/mongodb.png" />
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a target="_blank" href="https://www.mongodb.com/">
+                  <div class="skill-box">
+                    <img class="skill-img-log" src="./img/mongodb.png" />
                     <span>mongoDB</span>
-                  </a>
-                </li>
+                  </div>
+                </a>
+              </li>
 
-                <li class="bootstrap float-left" title="Bootstrap">
-                  <a target="_blank" href="https://getbootstrap.com/">
-                    <i class="devicon-git-plain colored"></i>
+              <li>
+                <a target="_blank" href="https://getbootstrap.com/">
+                  <div class="skill-box">
+                    <div class="skill-icon">
+                      <i class="devicon-git-plain colored"></i>
+                    </div>
                     <span>Git</span>
-                  </a>
-                </li>
+                  </div>
+                </a>
+              </li>
 
-                <li class="aws float-left" title="Amazon Web Services">
-                  <a target="_blank" href="https://aws.amazon.com/">
-                    <i class="devicon-amazonwebservices-plain"></i>
+              <li>
+                <a target="_blank" href="https://aws.amazon.com/">
+                  <div class="skill-box">
+                    <div class="skill-icon">
+                      <i class="devicon-amazonwebservices-plain"></i>
+                    </div>
                     <span>AWS</span>
-                  </a>
-                </li>
-                <li class="aws float-left" title="Heroku">
-                  <a target="_blank" href="https://www.heroku.com/">
-                    <i class="devicon-heroku-plain colored"></i>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a target="_blank" href="https://www.heroku.com/">
+                  <div class="skill-box">
+                    <div class="skill-icon">
+                      <i class="devicon-heroku-plain colored"></i>
+                    </div>
                     <span>Heroku</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
           </div>
 
-          <div class="row no-gutters">
-            <div class="col-12 projects">
-              <h3>My Project</h3>
+          <!-- My Project -->
+          <div class="p-10">
+            <h3>My Project</h3>
+            <div class="p-2">
               <p>Below are just a few highlights of my personal projects.</p>
-              <hr />
-              <!-- lyntour -->
-              <div class="row no-gutters project-row">
-                <div class="col-2 col-sm-4 col-md-3 project-logo-column">
-                  <a target="_blank" href="http://lyntour.lisa7h.com">
-                    <img class="project-logo" src="./img/logo-lyntour.png" />
-                  </a>
-                </div>
-                <div class="col-10 col-sm-8 col-md-9">
-                  <a target="_blank" href="https://lyntour.com/">
-                    <h4 class="name">Lyntour</h4>
-                    <h6>lyntour.com</h6>
-                  </a>
-                  <p class="description">
-                    Tourism information website based on bloggers input
-                    <br />
-                    Next.js, Apollo, GraphQL, Bootstrap5, Material UI-5,
-                    Javascript ES6+, CSS, HTML, webpack, npm
-                  </p>
-                </div>
-              </div>
-              <hr />
-              <!-- movie-matcher -->
-              <div class="row no-gutters project-row">
-                <div class="col-2 col-sm-4 col-md-3 project-logo-column">
-                  <a target="_blank" href="http://movie-matcher.lisa7h.com">
-                    <img
-                      class="project-logo"
-                      src="./img/logo-movie-matcher.png"
-                    />
-                  </a>
-                </div>
-                <div class="col-10 col-sm-8 col-md-9">
-                  <a target="_blank" href="http://movie-matcher.lisa7h.com">
-                    <h4 class="name">Move Matcher</h4>
-                    <h6>movie-matcher.lisa7h.com</h6>
-                  </a>
-                  <p class="description">
-                    Using yts.mx free REST API of the Movie info
-                    <br />
-                    React, Axios, Javascript, HTML, CSS, webpack, npm
-                  </p>
-                </div>
-              </div>
-              <hr />
-              <!-- Jump Game -->
-              <div class="row no-gutters project-row">
-                <div class="col-2 col-sm-4 col-md-3 project-logo-column">
-                  <a target="_blank" href="https://jump-game.lisa7h.com/">
-                    <img class="project-logo" src="./img/jump-game.png" />
-                  </a>
-                </div>
-                <div class="col-10 col-sm-8 col-md-9">
-                  <a target="_blank" href="http://yokose.lisa7h.com">
-                    <h4 class="name">Jump Game</h4>
-                    <h6>jump-game.lisa7h.com</h6>
-                  </a>
-                  <p class="description">
-                    Jump Game
-                    <br />
-                    React, Javascript ES6+, CSS, HTML, webpack, npm
-                  </p>
-                </div>
-              </div>
-              <hr />
-              <!-- Yokose -->
-              <div class="row no-gutters project-row">
-                <div class="col-2 col-sm-4 col-md-3 project-logo-column">
-                  <a target="_blank" href="http://yokose.lisa7h.com">
-                    <img class="project-logo" src="./img/logo-yokose.png" />
-                  </a>
-                </div>
-                <div class="col-10 col-sm-8 col-md-9">
-                  <a target="_blank" href="http://yokose.lisa7h.com">
-                    <h4 class="name">Yokose</h4>
-                    <h6>yokose.lisa7h.com</h6>
-                  </a>
-                  <p class="description">
-                    stock and financial index information and notification
-                    system
-                    <br />
-                    React, Redux, Axios, E-chart, Javascript, HTML, CSS
-                  </p>
-                </div>
-              </div>
-              <hr />
             </div>
+            <hr />
+
+            <!-- lyntour -->
+            <div class="flex">
+              <!-- project log -->
+              <div class="m-2">
+                <a target="_blank" href="http://lyntour.lisa7h.com">
+                  <img class="project-logo" src="./img/logo-lyntour.png" />
+                </a>
+              </div>
+              <div class="m-2">
+                <a target="_blank" href="https://lyntour.com/">
+                  <h4 class="name">Lyntour</h4>
+                  <h6>lyntour.com</h6>
+                </a>
+                <p class="description">
+                  Tourism information website based on bloggers input
+                  <br />
+                  Next.js, Apollo, GraphQL, Bootstrap5, Material UI-5,
+                  Javascript ES6+, CSS, HTML, webpack, npm
+                </p>
+              </div>
+            </div>
+            <hr />
+
+            <!-- movie-matcher -->
+            <div class="flex">
+              <div class="m-2">
+                <a target="_blank" href="http://movie-matcher.lisa7h.com">
+                  <img
+                    class="project-logo"
+                    src="./img/logo-movie-matcher.png"
+                  />
+                </a>
+              </div>
+              <div class="m-2">
+                <a target="_blank" href="http://movie-matcher.lisa7h.com">
+                  <h4 class="name">Move Matcher</h4>
+                  <h6>movie-matcher.lisa7h.com</h6>
+                </a>
+                <p class="description">
+                  Using yts.mx free REST API of the Movie info
+                  <br />
+                  React, Axios, Javascript, HTML, CSS, webpack, npm
+                </p>
+              </div>
+            </div>
+            <hr />
+
+            <!-- Jump Game -->
+            <div class="flex">
+              <div class="m-2">
+                <a target="_blank" href="https://jump-game.lisa7h.com/">
+                  <img class="project-logo" src="./img/jump-game.png" />
+                </a>
+              </div>
+              <div class="m-2">
+                <a target="_blank" href="http://yokose.lisa7h.com">
+                  <h4 class="name">Jump Game</h4>
+                  <h6>jump-game.lisa7h.com</h6>
+                </a>
+                <p class="description">
+                  Jump Game
+                  <br />
+                  React, Javascript ES6+, CSS, HTML, webpack, npm
+                </p>
+              </div>
+            </div>
+            <hr />
+
+            <!-- Yokose -->
+            <div class="flex">
+              <div class="m-2">
+                <a target="_blank" href="http://yokose.lisa7h.com">
+                  <img class="project-logo" src="./img/logo-yokose.png" />
+                </a>
+              </div>
+              <div class="m-2">
+                <a target="_blank" href="http://yokose.lisa7h.com">
+                  <h4 class="name">Yokose</h4>
+                  <h6>yokose.lisa7h.com</h6>
+                </a>
+                <p class="description">
+                  stock and financial index information and notification system
+                  <br />
+                  React, Redux, Axios, E-chart, Javascript, HTML, CSS
+                </p>
+              </div>
+            </div>
+            <hr />
           </div>
-        </div>
+        </main>
       </div>
     </div>
   </body>
