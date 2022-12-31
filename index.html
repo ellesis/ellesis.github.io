@@ -17,54 +17,52 @@
       integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
       crossorigin="anonymous"
     />
-    <!-- dev icon css -->
+    <!-- dev skills icon css -->
     <link
       rel="stylesheet"
       href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"
     />
-
-    <!-- bootstrap -->
-    <link
-      rel="stylesheet"
-      media="all"
-      href="./css/application.css"
-      data-turbolinks-track="reload"
-    />
-
     <!-- tailwindcss -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="./js/tailwind.config.js"></script>
+    <link rel="stylesheet" media="screen" href="./global.css" />
+    <script src="./tailwind.config.js"></script>
     <style type="text/tailwindcss">
       @layer base {
         h1 {
-          @apply text-5xl font-bold p-2;
+          @apply text-3xl font-oswald font-medium;
         }
         h2 {
-          @apply text-4xl font-bold p-1;
+          @apply text-xl font-oswald;
         }
         h3 {
-          @apply text-4xl font-bold p-2;
+          @apply text-xl p-2;
         }
         h4 {
-          @apply text-2xl font-bold p-1;
+          @apply text-lg font-bold;
+        }
+        h6 {
+          @apply text-sm text-orange-400;
         }
         hr {
-          @apply my-4;
+          @apply my-2;
         }
       }
 
       @layer components {
         .skill-box {
-          @apply flex flex-col items-center p-4 w-40;
+          @apply flex flex-col items-center m-2 w-20;
         }
         .skill-icon {
-          @apply text-6xl;
+          @apply text-4xl;
         }
         .skill-img-log {
-          @apply w-14 h-14 my-1;
+          @apply w-9 h-9;
         }
         .project-logo {
-          @apply max-w-[80px] sm:max-w-[100px] md:max-w-[140px];
+          @apply max-w-[80px] sm:max-w-[100px] md:max-w-[120px];
+        }
+        .project-link {
+          @apply hover:text-orange-400 hover:underline;
         }
       }
 
@@ -75,55 +73,53 @@
         }
       }
     </style>
-
-    <!-- <link rel="stylesheet" media="screen" href="./css/home.css" /> -->
   </head>
 
-  <body class="bg-lightyellow text-[14px]">
+  <body class="bg-lightyellow text-[14px] font-mont">
     <div class="min-h-screen flex flex-col">
       <div class="flex flex-col flex-1 sm:flex-row">
         <!-- left side -->
-        <aside class="bg-darkgreen w-full sm:w-80 md:w-96">
+        <aside class="bg-darkgreen w-full sm:w-44 md:w-60">
           <div class="flex flex-col items-center p-4 text-gray-300">
             <h1>Lisa Han</h1>
             <h2>Software Engineer</h2>
           </div>
 
-          <div class="flex flex-col px-8">
-            <ul class="text-gray-300 space-y-4 py-8">
+          <div class="flex flex-col px-4">
+            <ul class="text-gray-300 space-y-1 pb-4">
               <li class="linkedin">
-                <span class="text-5xl">
+                <span class="text-3xl">
                   <i class="fab fa-linkedin"></i>
                 </span>
                 <a
                   target="_blank"
                   href="http://linkedin.com/in/ellesis"
-                  class="text-orange-400"
+                  class="text-orange-400 hover:text-white hover:underline"
                 >
                   LinkedIn
                 </a>
               </li>
 
               <li class="github">
-                <span class="text-5xl">
+                <span class="text-3xl">
                   <i class="fab fa-github-square"></i>
                 </span>
                 <a
                   target="_blank"
                   href="https://github.com/ellesis/"
-                  class="text-orange-400"
+                  class="text-orange-400 hover:text-white hover:underline"
                   >GitHub</a
                 >
               </li>
 
               <li class="pdf">
-                <span class="text-5xl">
+                <span class="text-3xl">
                   <i class="fas fa-file-pdf"></i>
                 </span>
                 <a
                   target="_blank"
                   href="./data/Resume-LisaHan-2022.pdf"
-                  class="text-orange-400"
+                  class="text-orange-400 hover:text-white hover:underline"
                   >PDF Resume</a
                 >
               </li>
@@ -134,9 +130,9 @@
         <!-- main -->
         <main class="flex-1 sm:min-w-[400px]">
           <!-- About me -->
-          <div class="p-10">
+          <div class="p-4">
             <h3>About Me</h3>
-            <ul>
+            <ul class="list-disc mx-4">
               <li>
                 Upgrade skills as the latest modern web technology to be
                 qualified for current job market
@@ -155,7 +151,7 @@
           </div>
 
           <!-- skill icons -->
-          <div class="p-10">
+          <div class="p-4">
             <h3>Skills</h3>
             <ul class="flex flex-wrap">
               <li>
@@ -356,7 +352,7 @@
           </div>
 
           <!-- My Project -->
-          <div class="p-10">
+          <div class="p-4">
             <h3>My Project</h3>
             <div class="p-2">
               <p>Below are just a few highlights of my personal projects.</p>
@@ -372,7 +368,11 @@
                 </a>
               </div>
               <div class="m-2">
-                <a target="_blank" href="https://lyntour.com/">
+                <a
+                  target="_blank"
+                  href="https://lyntour.com/"
+                  class="project-link"
+                >
                   <h4 class="name">Lyntour</h4>
                   <h6>lyntour.com</h6>
                 </a>
@@ -397,7 +397,11 @@
                 </a>
               </div>
               <div class="m-2">
-                <a target="_blank" href="http://movie-matcher.lisa7h.com">
+                <a
+                  target="_blank"
+                  href="http://movie-matcher.lisa7h.com"
+                  class="project-link"
+                >
                   <h4 class="name">Move Matcher</h4>
                   <h6>movie-matcher.lisa7h.com</h6>
                 </a>
@@ -418,7 +422,11 @@
                 </a>
               </div>
               <div class="m-2">
-                <a target="_blank" href="http://yokose.lisa7h.com">
+                <a
+                  target="_blank"
+                  href="http://yokose.lisa7h.com"
+                  class="project-link"
+                >
                   <h4 class="name">Jump Game</h4>
                   <h6>jump-game.lisa7h.com</h6>
                 </a>
@@ -439,7 +447,11 @@
                 </a>
               </div>
               <div class="m-2">
-                <a target="_blank" href="http://yokose.lisa7h.com">
+                <a
+                  target="_blank"
+                  href="http://yokose.lisa7h.com"
+                  class="project-link"
+                >
                   <h4 class="name">Yokose</h4>
                   <h6>yokose.lisa7h.com</h6>
                 </a>
