@@ -58,6 +58,9 @@
         .skill-img-log {
           @apply w-9 h-9;
         }
+        .project-logo-box {
+          @apply w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-[120px] md:h-[120px];
+        }
         .project-logo {
           @apply max-w-[80px] sm:max-w-[100px] md:max-w-[120px];
         }
@@ -361,7 +364,6 @@
 
             <!-- lyntour -->
             <div class="flex">
-              <!-- project log -->
               <div class="m-2">
                 <a target="_blank" href="http://lyntour.lisa7h.com">
                   <img class="project-logo" src="./img/logo-lyntour.png" />
@@ -379,8 +381,41 @@
                 <p class="description">
                   Tourism information website based on bloggers input
                   <br />
-                  Next.js, Apollo, GraphQL, Bootstrap5, Material UI-5,
-                  Javascript ES6+, CSS, HTML, webpack, npm
+                  React, Next.js, Apollo, Postgresql, GraphQL, Tailwindcss(CSS),
+                  Javascript ES6+, HTML, webpack, npm
+                </p>
+              </div>
+            </div>
+            <hr />
+
+            <!-- amarket -->
+            <div class="flex">
+              <div class="m-2">
+                <a target="_blank" href="https://amarket.vercel.app/">
+                  <div
+                    class="project-logo-box bg-[#131921] p-2 flex items-center"
+                  >
+                    <img src="./img/logo-market.png" />
+                  </div>
+                </a>
+              </div>
+              <div class="m-2">
+                <a
+                  target="_blank"
+                  href="https://amarket.vercel.app/"
+                  class="project-link"
+                >
+                  <h4 class="name">aMarket</h4>
+                  <h6>amarket.vercel.app</h6>
+                </a>
+                <p class="description">
+                  Shopping Site with
+                  <a target="_blank" href="https://fakestoreapi.com/"
+                    >fakestoreapi</a
+                  >
+                  <br />
+                  React, Next.js, Next-Auth.js, Tailwindcss(CSS), Firebase,
+                  Javascript ES6+, HTML, webpack, npm
                 </p>
               </div>
             </div>
